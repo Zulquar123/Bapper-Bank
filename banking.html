@@ -15,24 +15,48 @@
         <h1 class="text-4xl text-center mt-10 mb-4">Let's get Some <span class="font-semibold text-purple-600">
                 Moooney</span> </h1>
     </header>
-    <main>
-        <section mt-8>
-            <div class=" grid grid-cols-3 gap-4  w-3/4 mx-auto text-white">
+    <main class="w-3/4 mx-auto">
+        <!-- Balance and Transaction -->
+        <section class="mt-8">
+            <div class=" grid grid-cols-3 gap-4   text-white">
                 <div class="bg-blue-300 p-8 rounded ">
-                    <h3 class="text-3xl">Deposit</h3>
-                    <h3 class="text-2xl">$00</h3>
+                    <h3 class="text-2xl">Deposit</h3>
+                    <h3 class="text-4xl">$00</h3>
                 </div>
                 <div class="bg-green-300 p-8 rounded">
-                    <h3 class="text-3xl">Withdraw</h3>
-                    <h3 class="text-2xl">$00</h3>
+                    <h3 class="text-2xl">Withdraw</h3>
+                    <h3 class="text-4xl">$00</h3>
                 </div>
                 <div class="bg-yellow-300 p-8 rounded">
-                    <h3 class="text-3xl">Balance</h3>
-                    <h3 class="text-2xl">$1500</h3>
+                    <h3 class="text-2xl">Balance</h3>
+                    <h3 class="text-4xl">$1500</h3>
                 </div>
 
             </div>
         </section>
+
+        <!-- Deposit and Withdraw -->
+        <Section class="mt-8">
+            <div class=" grid grid-cols-2 gap-4">
+                <div class="bg-red-100 p-8 rounded">
+                    <h3 class="text-2xl">Please Deposit</h3>
+                    <div>
+                        <input id="Deposit-amount" type="text" placeholder="$ Amount you want to deposite"
+                            class="border-2 border-orange-400 rounded block w-3/4 mb-4 px-3">
+                        <button class="bg-pink-600 rounded py-2 px-3 text-white" id="deposit-submit">Submit</button>
+                    </div>
+                </div>
+
+                <div class="bg-purple-100 p-8 rounded">
+                    <h3 class="text-2xl">Please Withdraw</h3>
+                    <div>
+                        <input id="Withdraw-amount" type="text" placeholder="$ Amount you want to withdraw"
+                            class="border-2 border-orange-400 rounded block w-3/4 mb-4 px-3">
+                        <button class="bg-pink-600 rounded py-2 px-3 text-white" id="withdraw-submit">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </Section>
     </main>
 </body>
 
