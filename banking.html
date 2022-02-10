@@ -21,15 +21,15 @@
             <div class=" grid grid-cols-3 gap-4   text-white">
                 <div class="bg-blue-300 p-8 rounded ">
                     <h3 class="text-2xl">Deposit</h3>
-                    <h3 class="text-4xl">$00</h3>
+                    <h3 id="deposit-total" class="text-4xl">$00</h3>
                 </div>
                 <div class="bg-green-300 p-8 rounded">
                     <h3 class="text-2xl">Withdraw</h3>
-                    <h3 class="text-4xl">$00</h3>
+                    <h3 id="withdraw" class="text-4xl">$00</h3>
                 </div>
                 <div class="bg-yellow-300 p-8 rounded">
                     <h3 class="text-2xl">Balance</h3>
-                    <h3 class="text-4xl">$1500</h3>
+                    <h3 id="balance" class="text-4xl">$1500</h3>
                 </div>
 
             </div>
@@ -41,18 +41,18 @@
                 <div class="bg-red-100 p-8 rounded">
                     <h3 class="text-2xl">Please Deposit</h3>
                     <div>
-                        <input id="Deposit-amount" type="text" placeholder="$ Amount you want to deposite"
+                        <input id="deposit-input" type="text" placeholder="$ Amount you want to deposite"
                             class="border-2 border-orange-400 rounded block w-3/4 mb-4 px-3">
-                        <button class="bg-pink-600 rounded py-2 px-3 text-white" id="deposit-submit">Submit</button>
+                        <button class="bg-pink-600 rounded py-2 px-3 text-white" id="deposit-button">Deposit</button>
                     </div>
                 </div>
 
                 <div class="bg-purple-100 p-8 rounded">
                     <h3 class="text-2xl">Please Withdraw</h3>
                     <div>
-                        <input id="Withdraw-amount" type="text" placeholder="$ Amount you want to withdraw"
+                        <input id="Withdraw-input" type="text" placeholder="$ Amount you want to withdraw"
                             class="border-2 border-orange-400 rounded block w-3/4 mb-4 px-3">
-                        <button class="bg-pink-600 rounded py-2 px-3 text-white" id="withdraw-submit">Submit</button>
+                        <button class="bg-pink-600 rounded py-2 px-3 text-white" id="withdraw-button">Withdraw</button>
                     </div>
                 </div>
             </div>
