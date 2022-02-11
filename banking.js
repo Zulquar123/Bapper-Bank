@@ -10,6 +10,12 @@ document.getElementById('deposit-button').addEventListener('click', function () 
 
     depositFeild.value = '';  // Clear the deposite Field
 
+    // Set Deposit Total
+    const depositTotal = document.getElementById('deposit-total');
+    const previousDepositText = depositTotal.innerText;
+    const previousDepositAmount = parseFloat(previousDepositText);
+    const newDepositTotal = previousDepositAmount + newDepositAmount;
+    depositTotal.innerText = newDepositTotal;
 
     // Update Balance Account
 
@@ -19,11 +25,7 @@ document.getElementById('deposit-button').addEventListener('click', function () 
     const newBalanceTotal = previousBalanceTotal + newDepositAmount;
     balanceTotal.innerText = newBalanceTotal;
 
-    const depositTotal = document.getElementById('deposit-total');
-    const previousDepositText = depositTotal.innerText;
-    const previousDepositAmount = parseFloat(previousDepositText);
-    const newDepositTotal = previousDepositAmount + newDepositAmount;
-    depositTotal.innerText = newDepositTotal;
+
 });
 
 // handle withdraw button event
@@ -31,15 +33,29 @@ document.getElementById('deposit-button').addEventListener('click', function () 
 document.getElementById('withdraw-button').addEventListener('click', function () {
 
     //Get the amount deposited
+
     const withdrawFeild = document.getElementById('Withdraw-input');
     const newWithdrawAmountText = withdrawFeild.value;
     const newWithdrawAmount = parseFloat(newWithdrawAmountText);
 
+
+    // Set Withdraw Total
+    const withdrawTotal = document.getElementById('withdraw-total');
+    const previousWithdrawText = withdrawTotal.innerText;
+    const previousWithdrawTotal = parseFloat(previousWithdrawText);
+    const newWithdrawTotal = previousWithdrawTotal + newWithdrawAmount;
+    withdrawTotal.innerText = newWithdrawTotal;
+
+    withdrawFeild.value = '';  // Clear the withdraw Field
+
+    //update Balance
+
     const balanceTotal = document.getElementById('balance-total');
     const balanceTotalText = balanceTotal.innerText;
     const previousBalanceTotal = parseFloat(balanceTotalText);
-    const newBalanceTotal = previousBalanceTotal - newDepositAmount;
+    const newBalanceTotal = previousBalanceTotal - newWithdrawAmount;
     balanceTotal.innerText = newBalanceTotal;
+
 
 });
 
